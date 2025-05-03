@@ -10,7 +10,7 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      font-family: Georgia, serif;
+      font-family: monotype, serif;
       margin: 0;
       padding: 0;
       color: black;
@@ -78,7 +78,7 @@
 
   <div class="poem-box">
     <button onclick="generatePoem()">press</button>
-    <div id="poem">press</div>
+    <div id="poem"></div>
   </div>
 
   <script>
@@ -92,7 +92,7 @@
 
     function generatePoem() {
       let poem = "";
-      for (let i = 0; i < 20; i++) {
+      for (let i = 0; i < 14; i++) {
         const randomWord = words[Math.floor(Math.random() * words.length)];
         poem += randomWord + " ";
       }
