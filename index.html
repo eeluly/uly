@@ -23,10 +23,12 @@
 
     .content-box {
       background-color: #e0b3e5; /* Lavender/lilac background */
-      border: 2px solid #c08ac4; /* Slightly darker lilac border */
+      border: 1px solid #b8a8b4; /* Softer, grayer border */
       padding: 20px;
       border-radius: 8px;
       text-align: center;
+      max-width: 600px; /* Make the box narrower */
+      width: 100%;
     }
 
     .links {
@@ -70,6 +72,8 @@
       font-size: 1.1em;
       word-wrap: break-word;
       white-space: pre-wrap;
+      text-align: justify; /* Justify the poem text */
+      margin: 0;
     }
   </style>
 </head>
@@ -91,11 +95,11 @@
 
   <script>
     const words = [
-      "lucid", "beauties", "tub", "mouth", "nose", "a", "as", "deeply", "dying", "wired",
-      "junk", "name", "backwash", "drink", "I", "we", "selves", "water", "my", "desire",
-      "dance", "contain", "story", "gods", "heart", "sink", "in", "full", "confusion", "massive",
+      "lucid", "beauties", "tub", "mouth", "burger", "nose", "a", "as", "deeply", "dying", "wired",
+      "junk", "name", "media", "backwash", "drink", "I", "we", "selves", "water", "my", "whatever", "desire",
+      "dance", "vape", "contain", "story", "hole", "gods", "heart", "sink", "in", "full", "are", "confusion", "massive",
       "style", "ok", "rude", "cornflower", "arrival", "point", "of", "up", "into", "information",
-      "silence", "pearls", "wide", "swollen", "next", "if", "do", "you", "want", "to", "call"
+      "silence", "pearls", "wide", "kidding", "swollen", "next", "if", "do", "you", "want", "to", "call", "dick"
     ];
 
     function generatePoem() {
