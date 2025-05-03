@@ -24,9 +24,9 @@
     .content-box {
       background-color: #e0b3e5; /* Lavender/lilac background */
       border: 1px solid #d0cfd0; /* Light gray border */
-      padding: 20px;
+      padding: 5px;
       text-align: center;
-      max-width: 400px; /* Narrower box */
+      max-width: 300px; /* Narrower box */
       width: 100%;
     }
 
@@ -51,14 +51,14 @@
 
     .poem-box {
       background-color: rgba(255, 255, 255, 0.85);
-      padding: 20px;
+      padding: 10px;
       text-align: center;
       margin-top: 0; /* Remove margin between poem and links */
     }
 
     .poem-box button {
       font-size: 1.2em;
-      padding: 10px 20px; /* Smaller padding */
+      padding: 10px 10px; /* Smaller padding */
       background-color: white; /* White background */
       border: 1px solid #d0cfd0; /* Lighter gray border */
       color: black; /* Black text */
@@ -98,16 +98,16 @@
 
   <script>
     const words = [
-      "lucid", "beauties", "tub", "mouth", "nose", "a", "as", "deeply", "dying", "wired",
-      "junk", "name", "backwash", "drink", "I", "we", "selves", "water", "my", "desire",
-      "dance", "contain", "story", "gods", "heart", "sink", "in", "full", "confusion", "massive",
-      "style", "ok", "rude", "cornflower", "arrival", "point", "of", "up", "into", "information",
-      "silence", "pearls", "wide", "swollen", "next", "if", "do", "you", "want", "to", "call"
+      "lucid", "beauties", "do you", "ever" "tub", "mouth", "nose", "a", "as", "deeply", "dying", "wired",
+      "junk", "name", "backwash", "drink", "I", "we", "selves", "water", "my", "desire", "upset", "but first",
+      "dance", "contain", "story", "gods","would you", "heart", "sink", "in", "full", "confusion", "massive",
+      "style", "ok", "bad", "rude", "cornflower", "arrival", "snot", "point", "of", "up", "into", "information",
+      "silence", "pearls", "wide", "rash", "swollen", "next", "if", "do", "you", "want", "to", "call"
     ];
 
     function generatePoem() {
       let poem = "";
-      for (let i = 0; i < 25; i++) {
+      for (let i = 0; i < 14; i++) {
         const randomWord = words[Math.floor(Math.random() * words.length)];
         poem += randomWord + " ";
       }
