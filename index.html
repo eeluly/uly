@@ -34,7 +34,8 @@
       background-color: rgba(255, 255, 255, 0.85);
       padding: 20px;
       text-align: center;
-      margin-top: 0; /* Remove margin between poem and links */
+      margin-top: 0;
+      margin-bottom: 5px; /* Reduced space between links and button */
     }
 
     .links a {
@@ -53,17 +54,19 @@
       background-color: rgba(255, 255, 255, 0.85);
       padding: 10px;
       text-align: center;
-      margin-top: 0; /* Remove margin between poem and links */
+      margin-top: 0;
+      margin-bottom: 0; /* Removed extra bottom margin */
     }
 
     .poem-box button {
       font-size: 1.2em;
       padding: 10px 10px; /* Smaller padding */
-      background-color: white; /* White background */
-      border: 1px solid #d0cfd0; /* Lighter gray border */
-      color: black; /* Black text */
+      background-color: white;
+      border: 1px solid #d0cfd0;
+      color: black;
       cursor: pointer;
-      border-radius: 0; /* Remove rounded corners */
+      border-radius: 0;
+      margin-top: 0; /* Ensures no space above the button */
     }
 
     .poem-box button:hover {
@@ -75,7 +78,7 @@
       font-size: 1.1em;
       word-wrap: break-word;
       white-space: pre-wrap;
-      text-align: justify; /* Justify the poem text */
+      text-align: justify;
       margin: 0;
     }
   </style>
@@ -98,9 +101,9 @@
 
   <script>
     const words = [
-      "lucid", "beauties", "do you", "ever" "tub", "mouth", "nose", "a", "as", "deeply", "dying", "wired",
+      "lucid", "beauties", "do you", "ever", "tub", "mouth", "nose", "a", "as", "deeply", "dying", "wired",
       "junk", "name", "backwash", "drink", "I", "we", "selves", "water", "my", "desire", "upset", "but first",
-      "dance", "contain", "story", "gods","would you", "heart", "sink", "in", "full", "confusion", "massive",
+      "dance", "contain", "story", "gods", "would you", "heart", "sink", "in", "full", "confusion", "massive",
       "style", "ok", "bad", "rude", "cornflower", "arrival", "snot", "point", "of", "up", "into", "information",
       "silence", "pearls", "wide", "rash", "swollen", "next", "if", "do", "you", "want", "to", "call"
     ];
