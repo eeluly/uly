@@ -6,10 +6,10 @@
   <title>Welcome</title>
   <style>
     body {
-      background-image: url('img/bath.png'); /* make sure the path is correct */
-      background-repeat: repeat; /* repeat the image */
-      background-position: top left;
-      background-size: auto; /* tile at natural size */
+      background-image: url('img/fluids-bg.png'); /* make sure the path is correct */
+      background-size: contain; /* Ensures the whole image fits without repeating */
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Prevents the image from repeating */
       font-family: monotype, serif;
       margin: 0;
       padding: 0;
@@ -98,6 +98,7 @@
     </div>
   </div>
 
+  
   <script>
     const words = [
       "lucid", "beauties", "do you", "ever", "tub", "mouth", "nose", "a", "as", "deeply", "dying", "wired",
@@ -116,6 +117,10 @@
       document.getElementById("poem").innerText = poem.trim();
     }
   </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
