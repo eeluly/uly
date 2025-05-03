@@ -88,13 +88,13 @@
   <div class="content-box">
     <div class="links">
       <a href="#">bio</a>
-      <a href="#">projects</a>
       <a href="#">contact</a>
       <a href="fluids.html">FLUIDS</a>
+      <a href="#">read</a>
     </div>
 
     <div class="poem-box">
-      <button onclick="generatePoem()">press</button>
+      <button onclick="generatePoem()">write</button>
       <div id="poem"></div>
     </div>
   </div>
@@ -110,7 +110,7 @@
 
     function generatePoem() {
       let poem = "";
-      for (let i = 0; i < 14; i++) {
+      for (let i = 0; i < 30; i++) {
         const randomWord = words[Math.floor(Math.random() * words.length)];
         poem += randomWord + " ";
       }
