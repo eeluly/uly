@@ -3,29 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Stream</title>
+  <title>Image Grid</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
       background-color: #DED4D4;
       font-family: monotype, serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       color: black;
+      min-height: 100vh;
     }
 
-    .image-stream {
-      width: 100%;
-      max-width: 500px;
+    .container {
       display: flex;
       flex-direction: column;
-      gap: 20px; /* Space between images */
-      margin: 20px 0;
+      min-height: 100vh;
     }
 
-    .image-stream img {
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      width: 100%;
+      margin: 40px auto;
+      padding: 0 20px;
+      flex-grow: 1;
+    }
+
+    .image-grid img {
       width: 100%;
       height: auto;
       display: block;
@@ -37,7 +43,12 @@
       background: none;
       border: none;
       cursor: pointer;
-      margin-bottom: 40px;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .footer {
+      text-align: center;
     }
 
     .back-button:hover {
@@ -46,15 +57,19 @@
   </style>
 </head>
 <body>
+  <div class="container">
+    <div class="image-grid">
+      <img src="img/photo1.jpg" alt="Image 1" />
+      <img src="img/photo2.jpg" alt="Image 2" />
+      <img src="img/photo3.jpg" alt="Image 3" />
+      <img src="img/photo4.jpg" alt="Image 4" />
+      <img src="img/photo5.jpg" alt="Image 5" />
+      <!-- Add more images as needed -->
+    </div>
 
-  <div class="image-stream">
-    <img src="img/photo1.jpg" alt="Image 1" />
-    <img src="img/photo2.jpg" alt="Image 2" />
-    <img src="img/photo3.jpg" alt="Image 3" />
-    <!-- Add more images as needed -->
+    <div class="footer">
+      <button class="back-button" onclick="window.history.back()">←</button>
+    </div>
   </div>
-
-  <button class="back-button" onclick="window.history.back()">←</button>
-
 </body>
 </html>
