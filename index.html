@@ -5,21 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Welcome</title>
   <style>
+    html, body {
+      height: 100%; /* Ensure full height of the viewport */
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background-image: url('img/bath.png'); /* Updated image path */
-      background-size: cover; /* Ensures the image covers the entire screen */
+      background-size: 150%; /* Zooms in to show more of the image */
       background-position: center center; /* Centers the image */
       background-repeat: no-repeat; /* No repeating */
       background-attachment: fixed; /* Keeps the background fixed while content scrolls */
       background-color: #f0f0f0; /* Fallback color */
       font-family: monotype, serif;
-      margin: 0;
-      padding: 0;
       color: black;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start; /* Allows content to scroll naturally */
       min-height: 100vh;
     }
 
