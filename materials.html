@@ -10,6 +10,7 @@
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       font-family: monotype, serif;
@@ -26,6 +27,19 @@
       box-sizing: border-box;
       text-align: left;
       min-height: 150px;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+      font-size: 3rem;
+      color: #FA6852;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -35,6 +49,8 @@
     <!-- Add your text here -->
     <p>This is your blank box. You can put whatever you want here!</p>
   </div>
+
+  <button class="back-button" onclick="window.history.back()">←</button>
 
 </body>
 </html>
