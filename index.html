@@ -7,9 +7,10 @@
   <style>
     body {
       background-image: url('img/bath.png'); /* Updated image path */
-      background-size: cover; /* Ensure the image covers the entire page */
-      background-position: center; /* Center the image */
-      background-repeat: no-repeat; /* Don't repeat the image */
+      background-size: cover; /* Ensures the image covers the entire screen */
+      background-position: center center; /* Centers the image */
+      background-repeat: no-repeat; /* No repeating */
+      background-attachment: fixed; /* Keeps the background fixed while content scrolls */
       background-color: #f0f0f0; /* Fallback color */
       font-family: monotype, serif;
       margin: 0;
@@ -18,7 +19,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start; /* Allows content to scroll naturally */
       min-height: 100vh;
     }
 
@@ -29,6 +30,7 @@
       text-align: center;
       max-width: 300px; /* Narrower box */
       width: 100%;
+      margin: 20px 0; /* Adds margin to separate boxes */
     }
 
     .links {
@@ -99,6 +101,7 @@
     </div>
   </div>
 
+  
   <script>
     const words = [
       "lucid", "beauties", "do you", "ever", "tub", "mouth", "nose", "a", "as", "deeply", "dying", "wired",
