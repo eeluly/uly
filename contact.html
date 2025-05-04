@@ -43,8 +43,7 @@
       background-color: rgba(255, 255, 255, 0.85);
       padding: 20px;
       text-align: center;
-      margin-top: 0;
-      margin-bottom: 5px;
+      margin: 0;
     }
 
     .links a {
@@ -60,19 +59,16 @@
     }
 
     .back-button {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
+      font-size: 2rem;
+      color: #FA6852;
       background: none;
       border: none;
-      font-size: 2em;
-      color: #FA6852;
       cursor: pointer;
-      z-index: 1000;
+      margin-top: 10px;
     }
 
     .back-button:hover {
-      color: #e34b39;
+      opacity: 0.8;
     }
   </style>
 </head>
@@ -83,10 +79,8 @@
       <a href="mailto:amintadunn@gmail.com">email</a>
       <a href="https://www.instagram.com/mouthstagram" target="_blank">@mouthstagram</a>
     </div>
+    <button class="back-button" onclick="window.history.back()">←</button>
   </div>
-
-  <!-- Back Button -->
-  <button class="back-button" onclick="window.history.back()">←</button>
 
 </body>
 </html>
