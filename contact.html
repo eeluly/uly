@@ -6,37 +6,37 @@
   <title>Contact</title>
   <style>
     html, body {
-      height: 100%; /* Ensure full height of the viewport */
+      height: 100%;
       margin: 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center; /* This centers the content horizontally */
+      align-items: center;
     }
 
     body {
-      background-image: url('img/bath.png'); /* Updated image path */
-      background-size: 112%; /* Zoom in to cover more of the image */
-      background-position: center center; /* Center the background image */
-      background-repeat: no-repeat; /* No repeating */
-      background-attachment: fixed; /* Keep the background fixed while content scrolls */
-      background-color: #f0f0f0; /* Fallback color */
+      background-image: url('img/bath.png');
+      background-size: 112%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #f0f0f0;
       font-family: monotype, serif;
       color: black;
       min-height: 100vh;
-      width: 100%; /* Ensure it takes up the full width */
+      width: 100%;
     }
 
     .content-box {
-      background-color: #FEFFF2; /* ricey background */
-      border: 1px solid #FA6852; /* coral border */
+      background-color: #FEFFF2;
+      border: 1px solid #FA6852;
       padding: 5px;
       text-align: center;
-      max-width: 200px; /* Narrower box */
+      max-width: 200px;
       width: 100%;
-      box-sizing: border-box; /* Includes padding in width calculation */
-      margin: 20px 0; /* Adds margin to separate boxes */
+      box-sizing: border-box;
+      margin: 20px 0;
     }
 
     .links {
@@ -44,7 +44,7 @@
       padding: 20px;
       text-align: center;
       margin-top: 0;
-      margin-bottom: 5px; /* Reduced space between links and button */
+      margin-bottom: 5px;
     }
 
     .links a {
@@ -58,6 +58,22 @@
     .links a:hover {
       text-decoration: underline;
     }
+
+    .back-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: none;
+      border: none;
+      font-size: 2em;
+      color: #FA6852;
+      cursor: pointer;
+      z-index: 1000;
+    }
+
+    .back-button:hover {
+      color: #e34b39;
+    }
   </style>
 </head>
 <body>
@@ -69,9 +85,8 @@
     </div>
   </div>
 
-  
   <!-- Back Button -->
   <button class="back-button" onclick="window.history.back()">←</button>
-  
+
 </body>
 </html>
