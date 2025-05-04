@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <style>
+    html, body {
+      height: 100%; /* Ensure full height of the viewport */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* This centers the content horizontally */
+    }
+
+    body {
+      background-image: url('img/bath.png'); /* Updated image path */
+      background-size: 112%; /* Zoom in to cover more of the image */
+      background-position: center center; /* Center the background image */
+      background-repeat: no-repeat; /* No repeating */
+      background-attachment: fixed; /* Keep the background fixed while content scrolls */
+      background-color: #f0f0f0; /* Fallback color */
+      font-family: monotype, serif;
+      color: black;
+      min-height: 100vh;
+      width: 100%; /* Ensure it takes up the full width */
+    }
+
+    .content-box {
+      background-color: #FEFFF2; /* ricey background */
+      border: 1px solid #FA6852; /* coral border */
+      padding: 5px;
+      text-align: center;
+      max-width: 400px; /* Narrower box */
+      width: 100%;
+      box-sizing: border-box; /* Includes padding in width calculation */
+      margin: 20px 0; /* Adds margin to separate boxes */
+    }
+
+    .links {
+      background-color: rgba(255, 255, 255, 0.85);
+      padding: 20px;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 5px; /* Reduced space between links and button */
+    }
+
+    .links a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-box">
+    <div class="links">
+      <a href="mailto:your.email@example.com">Email</a>
+      <a href="https://www.instagram.com/yourinstagram" target="_blank">Instagram</a>
+    </div>
+  </div>
+
+</body>
+</html>
