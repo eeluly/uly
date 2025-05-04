@@ -37,6 +37,9 @@
       width: 100%;
       box-sizing: border-box;
       margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     .links {
@@ -119,7 +122,10 @@
       <div id="poem"></div>
     </div>
 
-    <button class="back-button" onclick="window.history.back()">←</button>
+    <!-- Remove back button on the home page -->
+    <!-- Only show back button on other pages, not the home page -->
+    <!-- <button class="back-button" onclick="window.history.back()">←</button> -->
+
   </div>
 
   <script>
