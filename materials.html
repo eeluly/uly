@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Images in Box</title>
+  <title>Image Stream</title>
   <style>
     html, body {
       height: 100%;
@@ -21,20 +21,19 @@
     .content-box {
       background-color: white;
       border: 1px solid #FA6852;
-      padding: 20px;
       width: 90%;
       max-width: 500px;
       box-sizing: border-box;
-      text-align: left;
-      min-height: 150px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px; /* Space between images */
       margin-bottom: 20px;
     }
 
     .content-box img {
-      max-width: 100%;
+      width: 100%; /* Ensures each image fills the content box width */
       height: auto;
       display: block;
-      margin: 10px 0;
     }
 
     .back-button {
@@ -53,9 +52,11 @@
 <body>
 
   <div class="content-box">
-    <p>Here’s an image inside the box:</p>
-    <img src="img/reacher.png" alt="Example image" />
-    <p>More text can go here after the image.</p>
+    <img src="img/reacher.png" alt="Image 1" />
+    <img src="img/bath.png" alt="Image 2" />
+    <img src="img/toxiqueflotte.png" alt="Image 3" />
+    <img src="img/threats.png" alt="Image 3" />
+    <!-- Add more <img> tags as needed -->
   </div>
 
   <button class="back-button" onclick="window.history.back()">←</button>
