@@ -49,13 +49,32 @@
       margin-top: 10px;
       background-color: #FFF;
     }
+
+    .back-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 2rem;
+      color: #FA6852; /* Coral red */
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .back-button:hover {
+      opacity: 0.8;
+    }
+
   </style>
 </head>
 <body>
 
+  <!-- Back Button -->
+  <button class="back-button" onclick="window.history.back()">←</button>
+
   <div class="content-box">
-    <h1>Write Your Bio</h1>
-    <textarea class="bio-textarea" placeholder="Uly Aminta is a multimedia, interdisciplinary artist interested in liminality, multiplicity, and crossover."></textarea>
+    <h1>write my bio</h1>
+    <textarea class="bio-textarea" placeholder="Write a sentence..."></textarea>
   </div>
 
 </body>
