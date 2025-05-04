@@ -9,18 +9,23 @@
       height: 100%; /* Ensure full height of the viewport */
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* This centers the content horizontally */
     }
 
     body {
       background-image: url('img/bath.png'); /* Updated image path */
-      background-size: 150%; /* Zooms in to show more of the image */
-      background-position: center center; /* Centers the image */
+      background-size: 120%; /* Zoom in to cover more of the image */
+      background-position: center center; /* Center the background image */
       background-repeat: no-repeat; /* No repeating */
-      background-attachment: fixed; /* Keeps the background fixed while content scrolls */
+      background-attachment: fixed; /* Keep the background fixed while content scrolls */
       background-color: #f0f0f0; /* Fallback color */
       font-family: monotype, serif;
       color: black;
       min-height: 100vh;
+      width: 100%; /* Ensure it takes up the full width */
     }
 
     .content-box {
@@ -30,6 +35,7 @@
       text-align: center;
       max-width: 300px; /* Narrower box */
       width: 100%;
+      box-sizing: border-box; /* Includes padding in width calculation */
       margin: 20px 0; /* Adds margin to separate boxes */
     }
 
