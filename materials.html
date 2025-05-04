@@ -22,19 +22,24 @@
 
     .image-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      padding: 40px;
       max-width: 1000px;
-      width: 100%;
-      margin: 40px auto;
-      padding: 0 20px;
-      flex-grow: 1;
+      margin: 0 auto;
+      box-sizing: border-box;
     }
 
     .image-grid img {
       width: 100%;
+      max-width: 100%;
       height: auto;
       display: block;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 20px;
     }
 
     .back-button {
@@ -43,16 +48,17 @@
       background: none;
       border: none;
       cursor: pointer;
-      padding: 20px 0;
-      text-align: center;
-    }
-
-    .footer {
-      text-align: center;
     }
 
     .back-button:hover {
       opacity: 0.8;
+    }
+
+    /* Responsive: stack on small screens */
+    @media (max-width: 600px) {
+      .image-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -63,7 +69,6 @@
       <img src="img/photo2.jpg" alt="Image 2" />
       <img src="img/photo3.jpg" alt="Image 3" />
       <img src="img/photo4.jpg" alt="Image 4" />
-      <img src="img/photo5.jpg" alt="Image 5" />
       <!-- Add more images as needed -->
     </div>
 
@@ -73,3 +78,4 @@
   </div>
 </body>
 </html>
+
