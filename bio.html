@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bio</title>
+  <style>
+    html, body {
+      height: 100%; /* Ensure full height of the viewport */
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; /* This centers the content horizontally */
+    }
+
+    body {
+      background-image: url('img/bath.png'); /* Updated image path */
+      background-size: 112%; /* Zoom in to cover more of the image */
+      background-position: center center; /* Center the background image */
+      background-repeat: no-repeat; /* No repeating */
+      background-attachment: fixed; /* Keep the background fixed while content scrolls */
+      background-color: #f0f0f0; /* Fallback color */
+      font-family: monotype, serif;
+      color: black;
+      min-height: 100vh;
+      width: 100%; /* Ensure it takes up the full width */
+    }
+
+    .content-box {
+      background-color: #FEFFF2; /* ricey background */
+      border: 1px solid #FA6852; /* coral border */
+      padding: 20px;
+      text-align: center;
+      max-width: 300px; /* Narrower box */
+      width: 100%;
+      box-sizing: border-box; /* Includes padding in width calculation */
+      margin: 20px 0; /* Adds margin to separate boxes */
+    }
+
+    .bio-textarea {
+      width: 100%;
+      height: 150px;
+      font-size: 1.2rem;
+      padding: 10px;
+      border: 1px solid #d0cfd0;
+      resize: none;
+      margin-top: 10px;
+      background-color: #FFF;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-box">
+    <h1>Write Your Bio</h1>
+    <textarea class="bio-textarea" placeholder="Uly Aminta is a multimedia, interdisciplinary artist interested in liminality, multiplicity, and crossover."></textarea>
+  </div>
+
+</body>
+</html>
