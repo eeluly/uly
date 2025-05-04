@@ -6,32 +6,27 @@
   <title>Image Stream</title>
   <style>
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
+      background-color: #DED4D4;
+      font-family: monotype, serif;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      font-family: monotype, serif;
-      background-color: #DED4D4;
       color: black;
     }
 
-    .content-box {
-      background-color: white;
-      border: 1px solid #FA6852;
-      width: 90%;
+    .image-stream {
+      width: 100%;
       max-width: 500px;
-      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       gap: 20px; /* Space between images */
-      margin-bottom: 20px;
+      margin: 20px 0;
     }
 
-    .content-box img {
-      width: 100%; /* Ensures each image fills the content box width */
+    .image-stream img {
+      width: 100%;
       height: auto;
       display: block;
     }
@@ -42,6 +37,7 @@
       background: none;
       border: none;
       cursor: pointer;
+      margin-bottom: 40px;
     }
 
     .back-button:hover {
@@ -51,12 +47,11 @@
 </head>
 <body>
 
-  <div class="content-box">
-    <img src="img/reacher.png" alt="Image 1" />
-    <img src="img/bath.png" alt="Image 2" />
-    <img src="img/toxiqueflotte.png" alt="Image 3" />
-    <img src="img/threats.png" alt="Image 3" />
-    <!-- Add more <img> tags as needed -->
+  <div class="image-stream">
+    <img src="img/photo1.jpg" alt="Image 1" />
+    <img src="img/photo2.jpg" alt="Image 2" />
+    <img src="img/photo3.jpg" alt="Image 3" />
+    <!-- Add more images as needed -->
   </div>
 
   <button class="back-button" onclick="window.history.back()">←</button>
