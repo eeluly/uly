@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blank Page</title>
+  <title>Images in Box</title>
   <style>
     html, body {
       height: 100%;
@@ -23,11 +23,18 @@
       border: 1px solid #FA6852;
       padding: 20px;
       width: 90%;
-      max-width: 400px;
+      max-width: 500px;
       box-sizing: border-box;
       text-align: left;
       min-height: 150px;
       margin-bottom: 20px;
+    }
+
+    .content-box img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 10px 0;
     }
 
     .back-button {
@@ -46,8 +53,9 @@
 <body>
 
   <div class="content-box">
-    <!-- Add your text here -->
-    <p>This is your blank box. You can put whatever you want here!</p>
+    <p>Here’s an image inside the box:</p>
+    <img src="img/example.jpg" alt="Example image" />
+    <p>More text can go here after the image.</p>
   </div>
 
   <button class="back-button" onclick="window.history.back()">←</button>
