@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Image Grid</title>
+  <title>Image Column</title>
   <style>
     html, body {
       margin: 0;
@@ -18,29 +18,33 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      align-items: center;
     }
 
     .image-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      display: flex;
+      flex-direction: column;
       gap: 40px;
       padding: 40px;
       max-width: 1000px;
-      margin: 0 auto;
+      width: 100%;
       box-sizing: border-box;
     }
 
     .image-grid img {
       width: 100%;
-      max-width: 100%;
       height: auto;
       display: block;
     }
 
-    .footer {
-      text-align: center;
-      padding: 20px;
-    }
+ .footer {
+  position: sticky;
+  bottom: 0;
+  background-color: #DED4D4; /* matches background to avoid overlap issue */
+  text-align: center;
+  padding: 20px;
+  z-index: 10;
+}
 
     .back-button {
       font-size: 3rem;
@@ -52,13 +56,6 @@
 
     .back-button:hover {
       opacity: 0.8;
-    }
-
-    /* Responsive: stack on small screens */
-    @media (max-width: 600px) {
-      .image-grid {
-        grid-template-columns: 1fr;
-      }
     }
   </style>
 </head>
