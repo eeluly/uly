@@ -37,14 +37,13 @@
       display: block;
     }
 
- .footer {
-  position: sticky;
-  bottom: 0;
-  background-color: #DED4D4; /* matches background to avoid overlap issue */
-  text-align: center;
-  padding: 20px;
-  z-index: 10;
-}
+    .footer {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background: none;
+      z-index: 100;
+    }
 
     .back-button {
       font-size: 3rem;
@@ -68,11 +67,12 @@
       <img src="img/toxiqueflotte.png" alt="Image 4" />
       <!-- Add more images as needed -->
     </div>
+  </div>
 
-    <div class="footer">
-      <button class="back-button" onclick="window.history.back()">←</button>
-    </div>
+  <div class="footer">
+    <button class="back-button" onclick="window.history.back()">←</button>
   </div>
 </body>
 </html>
+
 
