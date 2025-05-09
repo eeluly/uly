@@ -13,6 +13,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+
+    body {
       background-image: url('img/bath.png');
       background-size: 112%;
       background-position: center center;
@@ -21,34 +24,31 @@
       background-color: #f0f0f0;
       font-family: monotype, serif;
       color: black;
+      min-height: 100vh;
+      width: 100%;
     }
 
     .content-box {
-      background-color: #ECE8E7;
-      border: 2px solid #FA6852;
+      background-color: #FEFFF2;
+      border: 1px solid #FA6852;
       padding: 20px;
-      text-align: justify;
+      text-align: justify; /* Added justification */
       max-width: 300px;
       width: 100%;
       box-sizing: border-box;
+      margin: 20px 0;
     }
 
     .back-button {
+      font-size: 3rem;
+      color: #FA6852;
       background: none;
       border: none;
       cursor: pointer;
       margin-top: 10px;
     }
 
-    .back-button svg {
-      width: 64px;
-      height: 64px;
-      stroke: #FA6852;
-      stroke-width: 2.5;
-      fill: none;
-    }
-
-    .back-button:hover svg {
+    .back-button:hover {
       opacity: 0.8;
     }
   </style>
@@ -56,14 +56,9 @@
 <body>
 
   <div class="content-box">
-    I (Aminta Uly) am a collagist/editor working with dance, sound, visual art, linguistic experimentation, and poetry to explore how forms intersect and diverge, and to create systems where narrative and language follow their own rules. I use trance to reveal linguistic autonomy and ontological being, and to feel surprised. I am interested in thing-like people and people-like things, the granularity of dog training, old toys, microphilosophy, meds & drugs, object (im)permanence, the way things look under versus above water, comedy night at my common job, love in my life, subterfuge, and naming in general, especially of meteorological events.
+  I (Aminta Uly) am a collagist/editor working with dance, sound, visual art, linguistic experimentation, and poetry to explore how forms intersect and diverge, and to create systems where narrative and language follow their own rules. I use trance to reveal linguistic autonomy and ontological being, and to feel surprised. I am interested in thing-like people and people-like things, the granularity of dog training, old toys, microphilosophy, meds & drugs, object (im)permanence, the way things look under versus above water, comedy night at my common job, love in my life, subterfuge, naming in general, and the naming of meteorological events.
   </div>
-
-  <button class="back-button" onclick="window.history.back()" aria-label="Go back">
-    <svg viewBox="0 0 24 24">
-      <path d="M19 12H5M12 5l-7 7 7 7" stroke-linecap="square" stroke-linejoin="miter" />
-    </svg>
-  </button>
+  <button class="back-button" onclick="window.history.back()">←</button>
 
 </body>
 </html>
