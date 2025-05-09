@@ -29,7 +29,7 @@
     }
 
     .content-box {
-      background-color: #F1F0F0;
+      background-color: #e0f7fa; /* <-- Updated color */
       border: 1px solid #FA6852;
       padding: 5px;
       text-align: justify;
@@ -43,7 +43,7 @@
     }
 
     .links {
-      background-color: #F1F0F0;
+      background-color: #e0f7fa; /* <-- Updated to match content-box */
       padding: 20px;
       text-align: center;
       margin-top: 0;
@@ -63,26 +63,30 @@
     }
 
     .poem-box {
-      background-color: #F1F0F0;
+      background-color: #e0f7fa; /* <-- Updated to match content-box */
       padding: 10px;
       text-align: center;
       margin-top: 0;
       margin-bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
-    button.link-button {
-      all: unset;
-      font-family: inherit;
-      font-size: 1.2rem;
+    .poem-box button {
+      font-size: 1rem;
+      padding: 8px 12px;
+      background-color: #F3F2DD;
+      border: 1px solid #d0cfd0;
       color: black;
       cursor: pointer;
-      display: block;
-      margin: 10px 0;
-      text-align: center;
+      border-radius: 0;
+      margin-top: 0;
     }
 
-    button.link-button:hover {
-      text-decoration: underline;
+    .poem-box button:hover {
+      background-color: #f5f5f5;
     }
 
     #poem {
@@ -102,7 +106,7 @@
     </div>
 
     <div class="poem-box">
-      <button class="link-button" onclick="generatePoem()">Write</button>
+      <button onclick="generatePoem()">Write</button>
       <div id="poem"></div>
     </div>
   </div>
