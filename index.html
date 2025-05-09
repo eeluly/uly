@@ -42,6 +42,25 @@
       align-items: center;
     }
 
+    .links {
+      background-color: #E2D9DD;
+      padding: 20px 0 10px 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .links a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
     .poem-box {
       margin: 10px 0 0 0;
       padding: 0;
@@ -50,7 +69,7 @@
       box-sizing: border-box;
       display: flex;
       justify-content: center;
-      gap: 10px; /* adds space between buttons */
+      gap: 10px;
     }
 
     .poem-box button {
@@ -90,17 +109,25 @@
       justify-content: center;
       align-items: center;
       text-align: justify;
-      visibility: hidden; /* Start with the poem hidden */
+      visibility: hidden;
     }
   </style>
 </head>
 <body>
 
   <div class="content-box">
+    <div class="links">
+      <a href="bio.html">Bio</a>
+      <a href="materials.html">Materials</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://linktr.ee/aminta.uly.pelagia" target="_blank">More</a>
+    </div>
+
     <div class="poem-box">
       <button class="write-button" onclick="generateLine()">Write</button>
       <button class="erase-button" onclick="eraseLine()">Erase</button>
     </div>
+
     <div id="line"></div>
   </div>
 
