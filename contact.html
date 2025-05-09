@@ -13,9 +13,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-    }
-
-    body {
       background-image: url('img/bath.png');
       background-size: 112%;
       background-position: center center;
@@ -24,8 +21,6 @@
       background-color: #FCEE1D;
       font-family: monotype, serif;
       color: black;
-      min-height: 100vh;
-      width: 100%;
     }
 
     .content-box {
@@ -36,7 +31,7 @@
       max-width: 200px;
       width: 100%;
       box-sizing: border-box;
-      margin: 20px 0;
+      margin-bottom: 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -62,15 +57,20 @@
     }
 
     .back-button {
-      font-size: 3rem;
-      color: #FA6852;
       background: none;
       border: none;
       cursor: pointer;
-      margin-top: 20px; /* Adjusted spacing */
     }
 
-    .back-button:hover {
+    .back-button svg {
+      width: 48px;
+      height: 48px;
+      stroke: #FA6852;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .back-button:hover svg {
       opacity: 0.8;
     }
   </style>
@@ -83,7 +83,12 @@
       <a href="https://www.instagram.com/mouthstagram" target="_blank">@mouthstagram</a>
     </div>
   </div>
-  <button class="back-button" onclick="window.history.back()">←</button> <!-- Moved below content-box -->
+
+  <button class="back-button" onclick="window.history.back()" aria-label="Go back">
+    <svg viewBox="0 0 24 24">
+      <path d="M19 12H5M12 5l-7 7 7 7" stroke-linecap="square" stroke-linejoin="miter" />
+    </svg>
+  </button>
 
 </body>
 </html>
