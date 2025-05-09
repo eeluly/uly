@@ -9,6 +9,10 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       background-image: url('img/bath.png');
       background-size: 112%;
       background-position: center center;
@@ -19,36 +23,29 @@
       color: black;
     }
 
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
     .content-box {
       background-color: #ECE8E7;
-      border: 1px solid #ECE8E7;
+      border: 1px solid #FA6852;
       padding: 20px;
       text-align: justify;
       max-width: 300px;
       width: 100%;
       box-sizing: border-box;
-      margin: 0; /* Remove default spacing */
     }
 
     .back-button {
       background: none;
       border: none;
       cursor: pointer;
-      padding: 10px;
-      margin: 5px 0 0 0;
+      margin-top: 10px;
     }
 
     .back-button svg {
-      width: 40px;
-      height: 40px;
-      fill: #FA6852;
+      width: 64px;
+      height: 64px;
+      stroke: #FA6852;
+      stroke-width: 2.5;
+      fill: none;
     }
 
     .back-button:hover svg {
@@ -58,16 +55,15 @@
 </head>
 <body>
 
-  <div class="container">
-    <div class="content-box">
-      I (Aminta Uly) am a collagist/editor working with dance, sound, visual art, linguistic experimentation, and poetry to explore how forms intersect and diverge, and to create systems where narrative and language follow their own rules. I use trance to reveal linguistic autonomy and ontological being, and to feel surprised. I am interested in thing-like people and people-like things, the granularity of dog training, old toys, microphilosophy, meds & drugs, object (im)permanence, the way things look under versus above water, comedy night at my common job, love in my life, subterfuge, and naming in general, especially of meteorological events.
-    </div>
-    <button class="back-button" onclick="window.history.back()">
-      <svg viewBox="0 0 24 24">
-        <path d="M15 6l-6 6 6 6" stroke="#FA6852" stroke-width="2" fill="none" stroke-linecap="square" stroke-linejoin="miter"/>
-      </svg>
-    </button>
+  <div class="content-box">
+    I (Aminta Uly) am a collagist/editor working with dance, sound, visual art, linguistic experimentation, and poetry to explore how forms intersect and diverge, and to create systems where narrative and language follow their own rules. I use trance to reveal linguistic autonomy and ontological being, and to feel surprised. I am interested in thing-like people and people-like things, the granularity of dog training, old toys, microphilosophy, meds & drugs, object (im)permanence, the way things look under versus above water, comedy night at my common job, love in my life, subterfuge, and naming in general, especially of meteorological events.
   </div>
+
+  <button class="back-button" onclick="window.history.back()" aria-label="Go back">
+    <svg viewBox="0 0 24 24">
+      <path d="M19 12H5M12 5l-7 7 7 7" stroke-linecap="square" stroke-linejoin="miter" />
+    </svg>
+  </button>
 
 </body>
 </html>
