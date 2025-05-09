@@ -99,7 +99,7 @@
       <a href="contact.html">Contact</a>
       <a href="https://linktr.ee/aminta.uly.pelagia" target="_blank">More</a>
       <div class="poem-box">
-        <button onclick="generatePoem()">Write</button>
+        <button onclick="generateLine()">Write</button>
         <div id="poem"></div>
       </div>
     </div>
@@ -118,13 +118,10 @@
     // Combine them into one line
     const line = firstHalf + " " + secondHalf;
     
-    // Display the line
-    document.getElementById("line").innerText = line;
+    // Display the line in the poem div
+    document.getElementById("poem").innerText = line;
   }
 </script>
-
-<button onclick="generateLine()">Generate Line</button>
-<p id="line"></p>
 
 </body>
 </html>
