@@ -48,21 +48,38 @@
       text-align: center;
       width: 100%;
       box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      gap: 10px; /* adds space between buttons */
     }
 
     .poem-box button {
       font-size: 1rem;
       padding: 8px 12px;
-      background-color: #F6F8D7;
       border: 1px solid #d0cfd0;
       color: black;
       cursor: pointer;
       border-radius: 0;
-      margin-top: 10px;
     }
 
     .poem-box button:hover {
       background-color: #f5f5f5;
+    }
+
+    .poem-box .write-button {
+      background-color: #F6F8D7;
+    }
+
+    .poem-box .write-button:hover {
+      background-color: #f5f5f5;
+    }
+
+    .poem-box .erase-button {
+      background-color: #c1e0d1; /* grayish greenish light blue */
+    }
+
+    .poem-box .erase-button:hover {
+      background-color: #a8d1c1;
     }
 
     #line {
@@ -73,6 +90,7 @@
       justify-content: center;
       align-items: center;
       text-align: justify;
+      visibility: hidden; /* Start with the poem hidden */
     }
   </style>
 </head>
@@ -80,9 +98,10 @@
 
   <div class="content-box">
     <div class="poem-box">
-      <button onclick="generateLine()">Generate Line</button>
-      <div id="line"></div>
+      <button class="write-button" onclick="generateLine()">Write</button>
+      <button class="erase-button" onclick="eraseLine()">Erase</button>
     </div>
+    <div id="line"></div>
   </div>
 
 <script>
@@ -104,8 +123,20 @@
     // Combine them into one line
     const line = `${firstAdj} ${firstNoun} ${verb} ${secondAdj} ${secondNoun}`;
     
-    // Display the line
-    document.getElementById("line").innerText = line;
+    // Display the line and make it visible
+    const lineElement = document.getElementById("line");
+    lineElement.innerText = line;
+    lineElement.style.visibility = 'visible'; // Make the poem visible
+  }
+
+  function eraseLine() {
+    // Toggle visibility of the line
+    const lineElement = document.getElementById("line");
+    if (lineElement.style.visibility === 'visible') {
+      lineElement.style.visibility = 'hidden'; // Hide the poem
+    } else {
+      lineElement.style.visibility = 'visible'; // Show the poem again
+    }
   }
 </script>
 
