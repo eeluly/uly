@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Welcome</title>
   <style>
     html, body {
@@ -62,11 +62,12 @@
     }
 
     .poem-box {
-      margin: 10px 0 0 0;
-      padding: 0;
+      margin-top: 10px;
       text-align: center;
       width: 100%;
-      box-sizing: border-box;
+    }
+
+    .button-row {
       display: flex;
       justify-content: center;
       gap: 10px;
@@ -81,10 +82,6 @@
       border-radius: 0;
     }
 
-    .poem-box button:hover {
-      background-color: #f5f5f5;
-    }
-
     .poem-box .write-button {
       background-color: #F6F8D7;
     }
@@ -94,22 +91,16 @@
     }
 
     .poem-box .erase-button {
-      background-color: #c1e0d1; /* grayish greenish light blue */
+      background-color: #d7e8e2;
     }
 
     .poem-box .erase-button:hover {
-      background-color: #a8d1c1;
+      background-color: #cfe0dc;
     }
 
-    #line {
+    #poem {
       margin-top: 20px;
       text-align: justify;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: justify;
-      visibility: hidden;
     }
   </style>
 </head>
@@ -121,51 +112,43 @@
       <a href="materials.html">Materials</a>
       <a href="contact.html">Contact</a>
       <a href="https://linktr.ee/aminta.uly.pelagia" target="_blank">More</a>
+      <div class="poem-box">
+        <div class="button-row">
+          <button class="write-button" onclick="generatePoem()">Write</button>
+          <button class="erase-button" onclick="erasePoem()">Erase</button>
+        </div>
+        <div id="poem"></div>
+      </div>
     </div>
-
-    <div class="poem-box">
-      <button class="write-button" onclick="generateLine()">Write</button>
-      <button class="erase-button" onclick="eraseLine()">Erase</button>
-    </div>
-
-    <div id="line"></div>
   </div>
 
-<script>
-  // Arrays for the first and second halves
-  const adjFirstSet = ["doggy", "bad", "glad", "orphan", "updated", "similar", "boring"];
-  const nounFirstSet = ["god", "parent", "child", "childhood", "spot", "kid", "glyph", "baddie", "dog", "update", "dab", "fanboy"];
-  const verbs = ["eats", "bites", "nips", "pines after", "parents", "bores", "updates", "flicks", "pinches", "orphans", "sniffs", "prays over", "digests", "blinks at"];
-  const adjSecondSet = ["smart", "intelligent", "dumb", "caustic", "pragmatic", "clearheaded", "quick", "normal", "average", "pretty", "huge", "large", "big", "small", "dogmatic", "girlish", "boyish", "shiny", "glistening"];
-  const nounSecondSet = ["guy", "maddog", "cop", "clerk", "normie", "practicioner", "doc", "student", "quiverer", "politician", "girlfriend", "boyfriend", "partner", "cat"];
+  <script>
+    const adjFirstSet = ["doggy", "bad", "glad", "orphan", "updated", "similar", "boring"];
+    const nounFirstSet = ["god", "parent", "child", "childhood", "spot", "kid", "glyph", "baddie", "dog", "update", "dab", "fanboy"];
+    const verbSet = ["eats", "bites", "nips", "pines after", "parents", "bores", "updates", "flicks", "pinches", "orphans", "sniffs", "prays over", "digests", "blinks at"];
+    const adjSecondSet = ["smart", "intelligent", "dumb", "caustic", "pragmatic", "clearheaded", "quick", "normal", "average", "pretty", "huge", "large", "big", "small", "dogmatic", "girlish", "boyish", "shiny", "glistening"];
+    const nounSecondSet = ["guy", "maddog", "cop", "clerk", "normie", "practician", "doc", "student", "quiverer", "politician", "girlfriend", "boyfriend", "partner", "cat"];
 
-  function generateLine() {
-    // Select random elements from each array
-    const firstAdj = adjFirstSet[Math.floor(Math.random() * adjFirstSet.length)];
-    const firstNoun = nounFirstSet[Math.floor(Math.random() * nounFirstSet.length)];
-    const verb = verbs[Math.floor(Math.random() * verbs.length)];
-    const secondAdj = adjSecondSet[Math.floor(Math.random() * adjSecondSet.length)];
-    const secondNoun = nounSecondSet[Math.floor(Math.random() * nounSecondSet.length)];
+    const adjThirdSet = ["ecstatic", "extant", "extra", "strict", "grief-stricken", "stroking", "mute", "timid"];
+    const nounThirdSet = ["ex", "ax murderer", "axis", "oxes", "access", "ecstasy", "extras", "sex"];
+    const verbThirdSet = ["sees", "steals", "attacks", "taxes", "axes", "sexts", "tracks", "smacks", "exacts"];
+    const expressionSet = ["cookie crumbles", "spilled milk", "kick in the teeth", "ball in the court", "another day in paradise", "the camel’s back", "nut to crack", "candle at both ends", "insult to injury", "the cat out of the bag"];
 
-    // Combine them into one line
-    const line = `${firstAdj} ${firstNoun} ${verb} ${secondAdj} ${secondNoun}`;
-    
-    // Display the line and make it visible
-    const lineElement = document.getElementById("line");
-    lineElement.innerText = line;
-    lineElement.style.visibility = 'visible'; // Make the poem visible
-  }
-
-  function eraseLine() {
-    // Toggle visibility of the line
-    const lineElement = document.getElementById("line");
-    if (lineElement.style.visibility === 'visible') {
-      lineElement.style.visibility = 'hidden'; // Hide the poem
-    } else {
-      lineElement.style.visibility = 'visible'; // Show the poem again
+    function randomFrom(array) {
+      return array[Math.floor(Math.random() * array.length)];
     }
-  }
-</script>
+
+    function generatePoem() {
+      const line1 = `${randomFrom(adjFirstSet)} ${randomFrom(nounFirstSet)} ${randomFrom(verbSet)} ${randomFrom(adjSecondSet)} ${randomFrom(nounSecondSet)}`;
+      const line2 = `${randomFrom(adjThirdSet)}, ${randomFrom(nounThirdSet)}, ${randomFrom(verbThirdSet)}, ${randomFrom(expressionSet)}`;
+      const fullPoem = `<p>${line1}</p><p>${line2}</p>`;
+      document.getElementById("poem").innerHTML = fullPoem;
+    }
+
+    function erasePoem() {
+      document.getElementById("poem").innerHTML = "";
+    }
+  </script>
 
 </body>
 </html>
