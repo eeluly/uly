@@ -106,173 +106,62 @@
   </div>
 
  <script>
-  const text = `
-    ght your way to Paradise. birthday ribbons into this night
-    NOW WHOSE IS THAT SHRIEKING
-    must be one of our dead coming home
-    with cold goss & lovers’ laurel
-    directing their heiress pleasure flowers to no one again
-
-    what do you do with a dead
-
-    give the rose a twin / “ NEVER ”
-    why do you keep the dead treats the dead loan you
-    this small pock / that aberration
-
-    where do you stash your pray
-    your patterns
-    the dead would love them back
-    WE ARE NOT THE SAME
-    i am a knocked up sermon & u r
-    an utterance
-    lost in the pleiades’
-    light-hole
-
-    nothing in this speech but a hemorrhage
-    nothing that amounts to voice
-
-    o voice
-    o riddle
-    o quantum meruit exit
-    would you set yourself among the moons
-    to transgress the continuity
-    of their setting on you
-    or would you be way too nervous
-
-    “ I’VE BEEN DEPRIVED OF A JOY ”
-
-    i hear you buddy
-
-    brothers generally just beg pardon
-    but you are gehenna wet with flame
-    and the upturned-eye of all flamers
-    you are my singing bell
-    swallow one drop of flame
-    & fall home
-    you chew the poison gum
-    “ I DON’T KNOW IF IT’S WRONG ”
-    they serve you dainty meats
-    and you touch
-    your prayer hands
-    flame-boasting hammers
-    you fill the cup of your blood-eye
-    and life-vanishing aperture
-    you shout
-    and i hear you
-    “ THIS FLAME IS KIND OF PALE / WHAT SHALL I DIVINE FROM IT ”
-    you cross your acheron heart
-    to devour all divination
-    and i taste
-    your doggy tears
-    “ THIS ACT IS NOT MINE ”
-    freak name yourself
-    apostle stop
-    your flame is worse than obdurate
-    your garment heart
-    your thought is worse than obdurate
-    your venerable flame
-    you’re extra
-    your confused shroud
-    your act risen
-    and to what end
-    what appeal
-    what point
-    what are you wearing rn
-    what books do you read what tv lately
-    what coming what going
-    what song what sonority
-    what sublimation
-    why are you out here rejecting martyrdom
-    petite boy of the moon
-    as often the name will cry out
-    as often the pit has appealed
-    to this land of no flower
-    no fruit / no motorcar / and where the stones are stones
-    as often we all have plead / off in our wound
-
-    but judas gets a holiday
-    o precious pearl
-    as the light has lived
-    in the pleiad
-    work for the dead and you yourself
-    will sparkle
-    disturb the cloister with ur noise ur aerial noise
-    don’t kid
-    and do flame praises
-    don’t freak
-    o lover / o god
-    “ DON’T TRIP, WE’RE ALL GOD’S KIDS ”
-
-    ( & who are the gods
-    an elegy / so thoughtful
-    i do not doubt its question )
-
-    o lover
-    o poser
-    o patron saint
-
-    there rests not one night / as many are mourned
-    obdurate		heart			garment			of none /
-    obedient		heart			grime /				often
-    i			hate			my				feathercoat /
-    abstinent		heart /			ye				father /
-    tiny			heart	         -	            eye /				faith
-    in			haters /			yep				it’s a real
-    ring /			gates			uppity				impish /
-    astringent	-	glitter			our dear & beloved		employee /
-    stringy			litter			o				empire /
-    gin			liar			o no /
-    neither			air			nor				prayer /
-    then			i			o				u /
-    not										fun /		
-
-    flesh eyes		ingrown	firewire	world-famous flaming		desire /
-    flesh laugh		inept		free pile	white foam		/	feds
-    fashion			temp		fashion		moth				dean /
-    o			terrors		shut	   /	torment moth	       /		
-    no			never		flesh eyes	other men			beg /
-    venerate	freepstar	empire /			wait
-    enfer			paradigm			glitters			away /
-    feu			paradis				ribbons		awe /
-    creuser			peu				de 			croix /
-    raser			upper				lip /			what
-    seer /			cut				up			a
-    reason /		uppercut			for lunch /
-    rise			up				laughing		at
-    eros /			ça pue				le			temps /
-    o			upchuck			o			hell’s bells
-    bad			chant				or			sad smell /
-    sore			rapture				rib’s			unwell /	
-    seer /			rupture				ribbons /		tell me
-    en			prayer /			better			melt
-    l’ange			pragmatically /		better			do
-    linge /			paramatma			ain’t			near /
-    gleam			atma				at me /	
-    glean			adam				melt			an
-    ange /			dom				amen /			a
-    night			enters				me			as
-    it			turns				on /			o
-    anniv			u				thought		wrong /
-    venerated		awe				back			to dirt /
-    you’ve			waded				in			dirge
-    you’ve			paraded			ur			birth
-    you’ve thought 	your way to Paradise. 		birthday ribbons	into this night.
-  `;
-
-  const wordsArray = text.split(/\s+/); // Split the text into an array of words
+  const words = [
+    "fight", "your", "way", "to", "paradise", "birthday", "ribbons", "into", "this", "night",
+    "now", "whose", "is", "that", "shrieking", "must", "be", "one", "of", "our", "dead", "coming", "home",
+    "with", "cold", "goss", "&", "lovers'", "laurel", "directing", "their", "heiress", "pleasure", "flowers", 
+    "to", "no", "one", "again", "what", "do", "you", "do", "with", "a", "dead", "give", "the", "rose", "a", 
+    "twin", "never", "why", "do", "you", "keep", "the", "dead", "treats", "the", "dead", "loan", "you", "this", 
+    "small", "pock", "that", "aberration", "where", "do", "you", "stash", "your", "pray", "your", "patterns",
+    "the", "dead", "would", "love", "them", "back", "we", "are", "not", "the", "same", "i", "am", "a", "knocked", 
+    "up", "sermon", "&", "u", "r", "an", "utterance", "lost", "in", "the", "pleiades'", "light-hole", "nothing",
+    "in", "this", "speech", "but", "a", "hemorrhage", "nothing", "that", "amounts", "to", "voice", "o", "voice",
+    "o", "riddle", "o", "quantum", "meruit", "exit", "would", "you", "set", "yourself", "among", "the", "moons",
+    "to", "transgress", "the", "continuity", "of", "their", "setting", "on", "you", "or", "would", "you", "be",
+    "way", "too", "nervous", "i've", "been", "deprived", "of", "a", "joy", "i", "hear", "you", "buddy", "brothers",
+    "generally", "just", "beg", "pardon", "but", "you", "are", "gehenna", "wet", "with", "flame", "and", "the", 
+    "upturned-eye", "of", "all", "flamers", "you", "are", "my", "singing", "bell", "swallow", "one", "drop", "of",
+    "flame", "&", "fall", "home", "you", "chew", "the", "poison", "gum", "i", "don’t", "know", "if", "it’s", "wrong",
+    "they", "serve", "you", "dainty", "meats", "and", "you", "touch", "your", "prayer", "hands", "flame-boasting",
+    "hammers", "you", "fill", "the", "cup", "of", "your", "blood-eye", "and", "life-vanishing", "aperture", "you",
+    "shout", "and", "i", "hear", "you", "this", "flame", "is", "kind", "of", "pale", "what", "shall", "i", "divine",
+    "from", "it", "you", "cross", "your", "acheron", "heart", "to", "devour", "all", "divination", "and", "i", "taste",
+    "your", "doggy", "tears", "this", "act", "is", "not", "mine", "freak", "name", "yourself", "apostle", "stop", "your",
+    "flame", "is", "worse", "than", "obdurate", "your", "garment", "heart", "your", "thought", "is", "worse", "than",
+    "obdurate", "your", "venerable", "flame", "you’re", "extra", "your", "confused", "shroud", "your", "act", "risen",
+    "and", "to", "what", "end", "what", "appeal", "what", "point", "what", "are", "you", "wearing", "rn", "what",
+    "books", "do", "you", "read", "what", "tv", "lately", "what", "coming", "what", "going", "what", "song", "what",
+    "sonority", "what", "sublimation", "why", "are", "you", "out", "here", "rejecting", "martyrdom", "petite", "boy",
+    "of", "the", "moon", "as", "often", "the", "name", "will", "cry", "out", "as", "often", "the", "pit", "has", "appealed",
+    "to", "this", "land", "of", "no", "flower", "no", "fruit", "no", "motorcar", "and", "where", "the", "stones", "are",
+    "stones", "as", "often", "we", "all", "have", "plead", "off", "in", "our", "wound", "but", "judas", "gets", "a",
+    "holiday", "o", "precious", "pearl", "as", "the", "light", "has", "lived", "in", "the", "pleiad", "work", "for", "the",
+    "dead", "and", "you", "yourself", "will", "sparkle", "disturb", "the", "cloister", "with", "ur", "noise", "ur", "aerial",
+    "noise", "don’t", "kid", "and", "do", "flame", "praises", "don’t", "freak", "o", "lover", "o", "god", "don’t", "trip",
+    "we’re", "all", "god’s", "kids", "who", "are", "the", "gods", "an", "elegy", "so", "thoughtful", "i", "do", "not", 
+    "doubt", "its", "question", "o", "lover", "o", "poser", "o", "patron", "saint", "there", "rests", "not", "one", "night",
+    "as", "many", "are", "mourned", "obdurate", "heart", "garment", "of", "none", "obedient", "heart", "grime", "often", 
+    "i", "hate", "my", "feathercoat", "abstinent", "heart", "ye", "father", "tiny", "heart", "eye", "faith", "in", "haters",
+    "yep", "it’s", "a", "real", "ring", "gates", "uppity", "impish", "astringent", "glitter", "our", "dear", "beloved",
+    "employee", "stringy", "litter", "o", "empire", "gin", "liar", "o", "no", "neither", "air", "nor", "prayer", "then", 
+    "i", "o", "u", "not", "fun", "flesh", "eyes", "ingrown", "firewire", "world-famous", "flaming", "desire", "flesh",
+    "laugh", "inept", "free", "pile", "white", "foam", "feds", "fashion", "temp", "fashion", "moth", "dean", "o", "terrors",
+    "shut", "torment", "moth", "no", "never", "flesh", "eyes", "other", "men", "beg", "venerate", "freepstar", "empire", "wait",
+    "enfer", "paradigm", "glitters", "away", "feu", "paradis", "ribbons", "awe", "creuser", "peu", "de", "croix", "raser",
+    "upper", "lip", "what", "seer", "cut", "up", "a", "reason", "uppercut", "for", "lunch", "rise", "up", "laughing", "at",
+    "eros", "ça", "pue", "le", "temps", "o", "upchuck", "o", "hell’s", "bells", "bad", "chant", "or", "sad", "smell", "sore",
+    "rapture", "rib’s", "unwell", "seer", "rupture", "ribbons", "tell", "me", "en", "prayer", "better", "melt", "l’ange",
+    "pragmatically", "better", "do", "linge", "paramatma", "ain’t", "near", "gleam", "atma", "at", "me", "glean", "adam",
+    "melt", "an", "ange", "dom", "amen", "a", "night", "enters", "me", "as", "it", "turns", "on", "o", "anniv", "u", "thought",
+    "wrong", "venerated", "awe", "back", "to", "dirt", "you’ve", "waded", "in", "dirge", "you’ve", "paraded", "ur", "birth",
+    "you’ve", "thought", "your", "way", "to", "paradise", "birthday", "ribbons", "into", "this", "night"
+  ];
 
   function generatePoem() {
     let poem = "";
-    const lines = Math.floor(Math.random() * 4) + 2; // Random number of lines between 2 and 5
-    const lineLength = Math.floor(Math.random() * 6) + 7; // Random number of words per line between 7 and 12
-
-    for (let i = 0; i < lines; i++) {
-      let lineWords = [];
-      for (let j = 0; j < lineLength; j++) {
-        const randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)];
-        lineWords.push(randomWord);
-      }
-      poem += lineWords.join(" ") + "\n"; // Join words into a line and add newline
+    for (let i = 0; i < 30; i++) {
+      const randomWord = words[Math.floor(Math.random() * words.length)];
+      poem += randomWord + " ";
     }
     document.getElementById("poem").innerText = poem.trim();
   }
