@@ -105,20 +105,31 @@
     </div>
   </div>
 
-  <script>
-    const words = [
-      "are", "you", "having", "a", "good", "childhood",
-    ];
+<script>
+  const words = [
+    "are", "you", "having", "a", "good", "childhood", "low", "key", "this", "is", "trash",
+    "what", "am", "I", "supposed", "to", "think", "about", "that", "im", "too", "attached", 
+    "for", "sure", "pink", "pack", "punk", "pick", "cull", "pickle", "peak", "parkour", "up", 
+    "prick", "my", "praxis", "puncture", "punctum", "cop", "cope", "cap", "no", "cape", "caper", 
+    "appear", "clap", "the"
+  ];
 
-    function generatePoem() {
-      let poem = "";
-      for (let i = 0; i < 30; i++) {
+  function generatePoem() {
+    let poem = "";
+    const lines = Math.floor(Math.random() * 3) + 2; // Randomize number of lines between 2 and 4
+    for (let line = 0; line < lines; line++) {
+      let lineWords = [];
+      const wordsInLine = Math.floor(Math.random() * 5) + 5; // Random number of words between 5 and 10 per line
+      for (let i = 0; i < wordsInLine; i++) {
         const randomWord = words[Math.floor(Math.random() * words.length)];
-        poem += randomWord + " ";
+        lineWords.push(randomWord);
       }
-      document.getElementById("poem").innerText = poem.trim();
+      poem += lineWords.join(" ") + "\n"; // Join words and add newline
     }
-  </script>
+    document.getElementById("poem").innerText = poem.trim();
+  }
+</script>
+
 
 </body>
 </html>
