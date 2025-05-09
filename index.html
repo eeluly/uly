@@ -1,34 +1,283 @@
-<script>
-  const words = [
-    "are", "you", "having", "a", "good", "childhood", "low", "key", "this", "is", "trash",
-    "what", "am", "I", "supposed", "to", "think", "about", "that", "im", "too", "attached", 
-    "for", "sure", "pink", "pack", "punk", "pick", "cull", "pickle", "peak", "parkour", "up", 
-    "prick", "my", "praxis", "puncture", "punctum", "cop", "cope", "cap", "no", "cape", "caper", 
-    "appear", "clap", "the"
-  ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Welcome</title>
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    body {
+      background-image: url('img/bath.png');
+      background-size: 112%;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-color: #f0f0f0;
+      font-family: monotype, serif;
+      color: black;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .content-box {
+      background-color: #EFE9E6; /* new background color */
+      border: 1px solid #FA6852;
+      padding: 5px;
+      text-align: center;
+      max-width: 300px;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .links {
+      background-color: #EFE9E6;
+      padding: 20px 0 10px 0;
+      margin: 0;
+      width: 100%;
+    }
+
+    .links a {
+      display: block;
+      text-decoration: none;
+      color: black;
+      margin: 10px 0;
+      font-size: 1.2rem;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .poem-box {
+      margin: 10px 0 0 0;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .poem-box button {
+      font-size: 1rem;
+      padding: 8px 12px;
+      background-color: #F6F8D7;
+      border: 1px solid #d0cfd0;
+      color: black;
+      cursor: pointer;
+      border-radius: 0;
+      margin-top: 10px;
+    }
+
+    .poem-box button:hover {
+      background-color: #f5f5f5;
+    }
+
+    #poem {
+      margin-top: 20px;
+      text-align: justify;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content-box">
+    <div class="links">
+      <a href="bio.html">Bio</a>
+      <a href="materials.html">Materials</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://linktr.ee/aminta.uly.pelagia" target="_blank">More</a>
+      <div class="poem-box">
+        <button onclick="generatePoem()">Write</button>
+        <div id="poem"></div>
+      </div>
+    </div>
+  </div>
+
+ <script>
+  const text = `
+    ght your way to Paradise. birthday ribbons into this night
+    NOW WHOSE IS THAT SHRIEKING
+    must be one of our dead coming home
+    with cold goss & lovers’ laurel
+    directing their heiress pleasure flowers to no one again
+
+    what do you do with a dead
+
+    give the rose a twin / “ NEVER ”
+    why do you keep the dead treats the dead loan you
+    this small pock / that aberration
+
+    where do you stash your pray
+    your patterns
+    the dead would love them back
+    WE ARE NOT THE SAME
+    i am a knocked up sermon & u r
+    an utterance
+    lost in the pleiades’
+    light-hole
+
+    nothing in this speech but a hemorrhage
+    nothing that amounts to voice
+
+    o voice
+    o riddle
+    o quantum meruit exit
+    would you set yourself among the moons
+    to transgress the continuity
+    of their setting on you
+    or would you be way too nervous
+
+    “ I’VE BEEN DEPRIVED OF A JOY ”
+
+    i hear you buddy
+
+    brothers generally just beg pardon
+    but you are gehenna wet with flame
+    and the upturned-eye of all flamers
+    you are my singing bell
+    swallow one drop of flame
+    & fall home
+    you chew the poison gum
+    “ I DON’T KNOW IF IT’S WRONG ”
+    they serve you dainty meats
+    and you touch
+    your prayer hands
+    flame-boasting hammers
+    you fill the cup of your blood-eye
+    and life-vanishing aperture
+    you shout
+    and i hear you
+    “ THIS FLAME IS KIND OF PALE / WHAT SHALL I DIVINE FROM IT ”
+    you cross your acheron heart
+    to devour all divination
+    and i taste
+    your doggy tears
+    “ THIS ACT IS NOT MINE ”
+    freak name yourself
+    apostle stop
+    your flame is worse than obdurate
+    your garment heart
+    your thought is worse than obdurate
+    your venerable flame
+    you’re extra
+    your confused shroud
+    your act risen
+    and to what end
+    what appeal
+    what point
+    what are you wearing rn
+    what books do you read what tv lately
+    what coming what going
+    what song what sonority
+    what sublimation
+    why are you out here rejecting martyrdom
+    petite boy of the moon
+    as often the name will cry out
+    as often the pit has appealed
+    to this land of no flower
+    no fruit / no motorcar / and where the stones are stones
+    as often we all have plead / off in our wound
+
+    but judas gets a holiday
+    o precious pearl
+    as the light has lived
+    in the pleiad
+    work for the dead and you yourself
+    will sparkle
+    disturb the cloister with ur noise ur aerial noise
+    don’t kid
+    and do flame praises
+    don’t freak
+    o lover / o god
+    “ DON’T TRIP, WE’RE ALL GOD’S KIDS ”
+
+    ( & who are the gods
+    an elegy / so thoughtful
+    i do not doubt its question )
+
+    o lover
+    o poser
+    o patron saint
+
+    there rests not one night / as many are mourned
+    obdurate		heart			garment			of none /
+    obedient		heart			grime /				often
+    i			hate			my				feathercoat /
+    abstinent		heart /			ye				father /
+    tiny			heart	         -	            eye /				faith
+    in			haters /			yep				it’s a real
+    ring /			gates			uppity				impish /
+    astringent	-	glitter			our dear & beloved		employee /
+    stringy			litter			o				empire /
+    gin			liar			o no /
+    neither			air			nor				prayer /
+    then			i			o				u /
+    not										fun /		
+
+    flesh eyes		ingrown	firewire	world-famous flaming		desire /
+    flesh laugh		inept		free pile	white foam		/	feds
+    fashion			temp		fashion		moth				dean /
+    o			terrors		shut	   /	torment moth	       /		
+    no			never		flesh eyes	other men			beg /
+    venerate	freepstar	empire /			wait
+    enfer			paradigm			glitters			away /
+    feu			paradis				ribbons		awe /
+    creuser			peu				de 			croix /
+    raser			upper				lip /			what
+    seer /			cut				up			a
+    reason /		uppercut			for lunch /
+    rise			up				laughing		at
+    eros /			ça pue				le			temps /
+    o			upchuck			o			hell’s bells
+    bad			chant				or			sad smell /
+    sore			rapture				rib’s			unwell /	
+    seer /			rupture				ribbons /		tell me
+    en			prayer /			better			melt
+    l’ange			pragmatically /		better			do
+    linge /			paramatma			ain’t			near /
+    gleam			atma				at me /	
+    glean			adam				melt			an
+    ange /			dom				amen /			a
+    night			enters				me			as
+    it			turns				on /			o
+    anniv			u				thought		wrong /
+    venerated		awe				back			to dirt /
+    you’ve			waded				in			dirge
+    you’ve			paraded			ur			birth
+    you’ve thought 	your way to Paradise. 		birthday ribbons	into this night.
+  `;
+
+  const wordsArray = text.split(/\s+/); // Split the text into an array of words
 
   function generatePoem() {
     let poem = "";
-    const lines = Math.floor(Math.random() * 3) + 2; // Randomize number of lines between 2 and 4
-    const lineStructure = [
-      { min: 3, max: 5 },
-      { min: 5, max: 7 },
-      { min: 4, max: 6 }
-    ]; // Different line structures for variety
+    const lines = Math.floor(Math.random() * 4) + 2; // Random number of lines between 2 and 5
+    const lineLength = Math.floor(Math.random() * 6) + 7; // Random number of words per line between 7 and 12
 
-    // Select a random structure
-    const structure = lineStructure[Math.floor(Math.random() * lineStructure.length)];
-
-    for (let line = 0; line < lines; line++) {
+    for (let i = 0; i < lines; i++) {
       let lineWords = [];
-      const wordsInLine = Math.floor(Math.random() * (structure.max - structure.min + 1)) + structure.min;
-      for (let i = 0; i < wordsInLine; i++) {
-        const randomWord = words[Math.floor(Math.random() * words.length)];
+      for (let j = 0; j < lineLength; j++) {
+        const randomWord = wordsArray[Math.floor(Math.random() * wordsArray.length)];
         lineWords.push(randomWord);
       }
-      poem += lineWords.join(" ") + "\n"; // Join words and add newline
+      poem += lineWords.join(" ") + "\n"; // Join words into a line and add newline
     }
-
     document.getElementById("poem").innerText = poem.trim();
   }
 </script>
+
+
+</body>
+</html>
