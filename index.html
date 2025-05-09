@@ -29,7 +29,7 @@
     }
 
     .content-box {
-      background-color: #E2D9DD; /* new background color */
+      background-color: #E2D9DD;
       border: 1px solid #FA6852;
       padding: 5px;
       text-align: center;
@@ -40,25 +40,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-    }
-
-    .links {
-      background-color: #E2D9DD;
-      padding: 20px 0 10px 0;
-      margin: 0;
-      width: 100%;
-    }
-
-    .links a {
-      display: block;
-      text-decoration: none;
-      color: black;
-      margin: 10px 0;
-      font-size: 1.2rem;
-    }
-
-    .links a:hover {
-      text-decoration: underline;
     }
 
     .poem-box {
@@ -84,8 +65,13 @@
       background-color: #f5f5f5;
     }
 
-    #poem {
+    #line {
       margin-top: 20px;
+      text-align: justify;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       text-align: justify;
     }
   </style>
@@ -93,33 +79,33 @@
 <body>
 
   <div class="content-box">
-    <div class="links">
-      <a href="bio.html">Bio</a>
-      <a href="materials.html">Materials</a>
-      <a href="contact.html">Contact</a>
-      <a href="https://linktr.ee/aminta.uly.pelagia" target="_blank">More</a>
-      <div class="poem-box">
-        <button onclick="generateLine()">Write</button>
-        <div id="poem"></div>
-      </div>
+    <div class="poem-box">
+      <button onclick="generateLine()">Generate Line</button>
+      <div id="line"></div>
     </div>
   </div>
 
 <script>
   // Arrays for the first and second halves
-  const firstHalfOptions = ["doggy", "bad", "glad", "orphan", "updated", "similar", "boring"];
-  const secondHalfOptions = ["god", "parent", "child", "childhood", "spot", "kid", "glyph", "baddie", "dog", "update", "dab", "fanboy"];
+  const adjFirstSet = ["doggy", "bad", "glad", "orphan", "updated", "similar", "boring"];
+  const nounFirstSet = ["god", "parent", "child", "childhood", "spot", "kid", "glyph", "baddie", "dog", "update", "dab", "fanboy"];
+  const verbs = ["eats", "bites", "nips", "pines after", "parents", "bores", "updates", "flicks", "pinches", "orphans", "sniffs", "prays over", "digests", "blinks at"];
+  const adjSecondSet = ["smart", "intelligent", "dumb", "caustic", "pragmatic", "clearheaded", "quick", "normal", "average", "pretty", "huge", "large", "big", "small", "dogmatic", "girlish", "boyish", "shiny", "glistening"];
+  const nounSecondSet = ["guy", "maddog", "cop", "clerk", "normie", "practician", "doc", "student", "quiverer", "politician", "girlfriend", "boyfriend", "partner", "cat"];
 
   function generateLine() {
     // Select random elements from each array
-    const firstHalf = firstHalfOptions[Math.floor(Math.random() * firstHalfOptions.length)];
-    const secondHalf = secondHalfOptions[Math.floor(Math.random() * secondHalfOptions.length)];
+    const firstAdj = adjFirstSet[Math.floor(Math.random() * adjFirstSet.length)];
+    const firstNoun = nounFirstSet[Math.floor(Math.random() * nounFirstSet.length)];
+    const verb = verbs[Math.floor(Math.random() * verbs.length)];
+    const secondAdj = adjSecondSet[Math.floor(Math.random() * adjSecondSet.length)];
+    const secondNoun = nounSecondSet[Math.floor(Math.random() * nounSecondSet.length)];
 
     // Combine them into one line
-    const line = firstHalf + " " + secondHalf;
+    const line = `${firstAdj} ${firstNoun} ${verb} ${secondAdj} ${secondNoun}`;
     
-    // Display the line in the poem div
-    document.getElementById("poem").innerText = line;
+    // Display the line
+    document.getElementById("line").innerText = line;
   }
 </script>
 
