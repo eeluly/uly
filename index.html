@@ -29,10 +29,10 @@
     }
 
     .content-box {
-      background-color: #F1F0F0; /* Unified background color for the whole box */
-      border: 1px solid #FA6852; /* Reintroduced border */
+      background-color: #F1F0F0;
+      border: 1px solid #FA6852;
       padding: 5px;
-      text-align: justify; /* Justify text */
+      text-align: justify;
       max-width: 300px;
       width: 100%;
       box-sizing: border-box;
@@ -43,7 +43,7 @@
     }
 
     .links {
-      background-color: #F1F0F0; /* Same background as content box */
+      background-color: #F1F0F0;
       padding: 20px;
       text-align: center;
       margin-top: 0;
@@ -63,7 +63,7 @@
     }
 
     .poem-box {
-      background-color: #F1F0F0; /* Same background as content box */
+      background-color: #F1F0F0;
       padding: 10px;
       text-align: center;
       margin-top: 0;
@@ -85,11 +85,10 @@
       background-color: #f5f5f5;
     }
 
-   #poem {
-      margin-top: 20px; /* Adds space between the button and the generated poetry */
-      text-align: justify; /* Justify the poem text */
+    #poem {
+      margin-top: 20px;
+      text-align: justify;
     }
-
   </style>
 </head>
 <body>
@@ -108,18 +107,19 @@
     </div>
   </div>
 
-<script>
-  const words = [
-    "are", "you", "having", "a", "good", "childhood",
-  ];
+  <script>
+    const words = [
+      "are", "you", "having", "a", "good", "childhood"
+    ];
 
     function generatePoem() {
-      let poem = "";
-      for (let i = 0; i < 30; i++) {
-        const randomWord = words[Math.floor(Math.random() * words.length)];
-        poem += randomWord + " ";
+      const shuffled = [...words];
+      for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
       }
-      document.getElementById("poem").innerText = poem.trim();
+      const poem = shuffled.join(" ");
+      document.getElementById("poem").innerText = poem;
     }
   </script>
 
